@@ -34,7 +34,11 @@ class computer
 		{
 			cout << "单价：" << _price << endl;
 		}
-
+		void setPrice(int x)
+		{
+			_price = x;
+			cout << "setPrice " << endl;
+		}
 	private:
 	float _price;  //float 型数据成员price，表示价格
 	static float _total_price;  //static成员，总价，不依附于某个对象
@@ -66,6 +70,10 @@ int main()
 
 	comp2.print();
 	comp2.print_unit_price();
+
+	comp2.setPrice(1000);
+	comp2.print_unit_price();
+	comp2.print();
 	return 0;
 
 }
